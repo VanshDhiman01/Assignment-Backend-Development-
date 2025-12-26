@@ -1,0 +1,44 @@
+{
+  "name": "api-gateway-assignment",
+  "version": "1.0.0",
+  "description": "Dynamic API Gateway with Node.js, Express, and TypeScript",
+  "main": "dist/gateway/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev:gateway": "nodemon --exec tsx src/index.ts",
+    "dev:service1": "nodemon --exec tsx src/backend-services/service1/server.ts",
+    "dev:service2": "nodemon --exec tsx src/backend-services/service2/server.ts",
+    "start:gateway": "node dist/gateway/index.js",
+    "start:service1": "node dist/backend-services/service1/server.js",
+    "start:service2": "node dist/backend-services/service2/server.js",
+    "dev:all": "concurrently \"npm run dev:service1\" \"npm run dev:service2\" \"npm run dev:gateway\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api-gateway",
+    "express",
+    "typescript",
+    "microservices",
+    "proxy"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "http-proxy-middleware": "^3.0.5",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.0.3",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

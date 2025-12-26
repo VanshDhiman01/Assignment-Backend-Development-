@@ -1,0 +1,1 @@
+{"version":3,"file":"proxy.routes.d.ts","sourceRoot":"","sources":["../../../../src/gateway/routes/proxy.routes.ts"],"names":[],"mappings":"AAAA;;;GAGG;AAEH,OAAO,EAAE,OAAO,EAAE,QAAQ,EAAE,YAAY,EAAE,MAAM,SAAS,CAAC;AAC1D,OAAO,EAAE,cAAc,EAAE,MAAM,mCAAmC,CAAC;AAEnE;;;GAGG;AACH,wBAAgB,qBAAqB,CAAC,cAAc,EAAE,cAAc,IAC1D,KAAK,OAAO,EAAE,KAAK,QAAQ,EAAE,MAAM,YAAY,KAAG,IAAI,CAG/D"}

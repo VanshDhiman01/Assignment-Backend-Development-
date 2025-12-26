@@ -1,0 +1,94 @@
+{
+  "port": 3000,
+  "routes": [
+    {
+      "path": "/users",
+      "target": "http://localhost:3001",
+      "methods": ["GET", "POST"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 100
+      }
+    },
+    {
+      "path": "/users/*",
+      "target": "http://localhost:3001",
+      "methods": ["GET", "PUT", "DELETE"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 100
+      }
+    },
+    {
+      "path": "/profiles",
+      "target": "http://localhost:3001",
+      "methods": ["GET", "POST"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 50
+      }
+    },
+    {
+      "path": "/profiles/*",
+      "target": "http://localhost:3001",
+      "methods": ["GET", "PUT", "DELETE"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 50
+      }
+    },
+    {
+      "path": "/tasks",
+      "target": "http://localhost:3002",
+      "methods": ["GET", "POST"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 200
+      }
+    },
+    {
+      "path": "/tasks/*",
+      "target": "http://localhost:3002",
+      "methods": ["GET", "PUT", "DELETE"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 200
+      }
+    },
+    {
+      "path": "/projects",
+      "target": "http://localhost:3002",
+      "methods": ["GET", "POST"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 100
+      }
+    },
+    {
+      "path": "/projects/*",
+      "target": "http://localhost:3002",
+      "methods": ["GET", "PUT", "DELETE"],
+      "authRequired": true,
+      "rateLimit": {
+        "windowMs": 60000,
+        "max": 100
+      }
+    }
+  ],
+  "jwt": {
+    "secret": "your-secret-key-change-in-production",
+    "expiresIn": "24h"
+  },
+  "defaultRateLimit": {
+    "windowMs": 60000,
+    "max": 1000
+  }
+}
+
